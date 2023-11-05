@@ -1,0 +1,13 @@
+dbt_demo:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5455
+      user: dwh
+      password: dwh
+      schema: dwh
+      threads: 1
+      dbname: dwh
+      keepalives_idle: 0 

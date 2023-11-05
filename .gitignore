@@ -1,0 +1,5 @@
+.env
+logs
+dbt_demo/target
+dbt_demo/dbt_packages
+dbt_demo/logs
