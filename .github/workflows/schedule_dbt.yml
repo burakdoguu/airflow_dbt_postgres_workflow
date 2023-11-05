@@ -1,5 +1,7 @@
 name: schedule_dbt
 
+on: [push]
+
 jobs:
   schedule_dbt:
     runs-on: ubuntu-latest
