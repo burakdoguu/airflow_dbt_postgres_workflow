@@ -1,8 +1,5 @@
 name: schedule_dbt
 
-on:
-  schedule:
-    - cron: "0 8 * * *"
 
 env:
   DBT_PROFILES_DIR: dbt_demo/
