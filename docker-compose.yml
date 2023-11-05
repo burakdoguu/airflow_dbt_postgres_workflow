@@ -136,9 +136,9 @@ services:
     build:
       context: ./docker/postgres_dwh
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: "{{ env_var('POSTGRES_USER') }}"
+      POSTGRES_PASSWORD: "{{ env_var('POSTGRES_PASSWORD') }}"
+      POSTGRES_DB: "{{ env_var('POSTGRES_DB') }}"
     volumes:
       - postgres-dwh-volume:/var/lib/postgresql/data
     restart: always
