@@ -1,10 +1,5 @@
 name: schedule_dbt
 
-
-env:
-  DBT_PROFILES_DIR: dbt_demo/
-
-
 jobs:
   schedule_dbt:
     runs-on: ubuntu-latest
