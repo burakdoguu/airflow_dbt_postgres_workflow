@@ -19,6 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-postgres==1.4.6
       - name: Test dbt
-        run: |
-          cd $GITHUB_HOME
-          ls
+        uses: ./
+          dbt_command: "dbt --version"
+          dbt_project_folder: dbt_demo
+          
