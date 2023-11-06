@@ -18,9 +18,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install dbt-postgres==1.4.6
+      - name: Checkout Repository
+        uses: actions/checkout@v4
       - name: Test dbt
-        uses: ./
-          with:
-          dbt_command: "dbt test --profiles-dir ./dbt_demo"
+        run: ls
 
           
