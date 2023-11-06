@@ -3,7 +3,7 @@ name: schedule_dbt
 on: [push]
 
 env:
-  DBT_PROFILES_DIR: ./
+  DBT_PROFILES_DIR: ./dbt_demo
 
 jobs:
   schedule_dbt:
