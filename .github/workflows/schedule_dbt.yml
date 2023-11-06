@@ -20,5 +20,5 @@ jobs:
           pip install dbt-postgres==1.4.6
       - name: Test dbt
         run: |
-          cd dbt_ demo
+          cd "dbt_ demo"
           dbt test
