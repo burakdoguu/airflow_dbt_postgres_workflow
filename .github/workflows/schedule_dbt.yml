@@ -2,8 +2,8 @@ name: schedule_dbt
 
 on: [push]
 
-env:
-  DBT_PROFILES_DIR: ./dbt_demo
+#env:
+#  DBT_PROFILES_DIR: ./dbt_demo
 
 jobs:
   schedule_dbt:
@@ -20,6 +20,7 @@ jobs:
           pip install dbt-postgres==1.4.6
       - name: Test dbt
         uses: ./
-          dbt_command: "dbt --version"
-          dbt_project_folder: dbt_demo
+          with:
+          dbt_command: "dbt test --profiles-dir ./dbt_demo"
+
           
