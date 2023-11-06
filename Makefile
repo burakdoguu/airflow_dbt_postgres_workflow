@@ -1,12 +1,12 @@
 setup:
 		docker compose up -d 
-		sleep 60
+		sleep 30
 		docker ps
 
 down:
 		docker compose down 
 
 testing:
-		docker exec -it airflow_scheduler /bin/bash -c "dbt tes ./dbt_demo"
+		docker exec --tty airflow_scheduler /bin/bash -c "dbt test ./dbt_demo"
 		sleep 10 
 		ls
