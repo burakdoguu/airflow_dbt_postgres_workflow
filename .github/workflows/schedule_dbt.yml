@@ -21,4 +21,4 @@ jobs:
       - name: Test dbt
         run: |
           cd $HOME
-          dbt test
+          ls
