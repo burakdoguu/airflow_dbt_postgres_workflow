@@ -20,5 +20,5 @@ jobs:
           pip install dbt-postgres==1.4.6
       - name: Test dbt
         run: |
-          cd $HOME
+          cd $GITHUB_HOME
           ls
