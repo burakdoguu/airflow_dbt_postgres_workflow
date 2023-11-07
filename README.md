@@ -1,1 +1,1 @@
-# airflow_dbt_postgres_workflow
+# dbt_postgres_workflow
