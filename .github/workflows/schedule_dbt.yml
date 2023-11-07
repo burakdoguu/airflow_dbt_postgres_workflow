@@ -17,11 +17,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-postgres==1.4.6
       - name: Checkout Repository
-        uses: actions/checkout@v4       
+        uses: actions/checkout@v4   
+      - name: Start postgres
+        run: make setup    
       - name: Test dbt
         run: |
           cd ./dbt_demo
-          dbt test
+          dbt seed
+      - name: Stop postgres
+        run: make down
           
 
           
