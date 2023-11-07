@@ -1,4 +1,0 @@
-dbt-postgres==1.4.6
-pytest
-dbt-airflow
-pandas

@@ -17,15 +17,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-postgres==1.4.6
       - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Create Airflow 
-        run: make setup
-      - name: Container exec
-        run: make testing
-#      - name: Test dbt
-#        run: |
-#          cd ./dbt_demo
-#          dbt test
+        uses: actions/checkout@v4       
+      - name: Test dbt
+        run: |
+          cd ./dbt_demo
+          dbt test
           
 
           
